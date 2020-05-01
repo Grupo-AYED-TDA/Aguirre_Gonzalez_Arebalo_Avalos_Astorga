@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1588225344 source:c:\users\franco user\documents\algoritmos\tpfiguras\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+
+1588180525 c:\users\franco user\documents\algoritmos\tpfiguras\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588225120 source:c:\users\franco user\documents\algoritmos\tpfiguras\funciones.cpp
+	"Figuras.h"
+
