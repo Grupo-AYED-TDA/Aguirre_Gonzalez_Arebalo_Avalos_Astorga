@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Figuras.cpp" />
 		<Unit filename="Figuras.h" />
-		<Unit filename="Funciones.cpp" />
+		<Unit filename="Lectura.cpp" />
+		<Unit filename="Lectura.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

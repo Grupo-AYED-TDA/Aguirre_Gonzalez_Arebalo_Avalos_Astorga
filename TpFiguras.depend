@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588225344 source:c:\users\franco user\documents\algoritmos\tpfiguras\main.cpp
+1588119976 source:c:\users\franco user\documents\algoritmos\tpfiguras\main.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>
@@ -14,6 +14,77 @@
 	<string.h>
 	<stdlib.h>
 
-1588225120 source:c:\users\franco user\documents\algoritmos\tpfiguras\funciones.cpp
+1588139481 source:c:\users\franco user\documents\algoritmos\tpfiguras\funciones.cpp
 	"Figuras.h"
+
+1588704597 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+	"Lectura.h"
+
+1588704283 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588119976 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leer desde archivo\leerarchivopunteroycontda\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+
+1588180525 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leer desde archivo\leerarchivopunteroycontda\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588482261 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\funciones.cpp
+	"leer.h"
+
+1588482612 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\leer.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588482299 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"leer.h"
+
+1588706350 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\lectura.cpp
+	"Lectura.h"
+	"Figuras.h"
+	<list>
+
+1588705237 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\lectura.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<list>
+
+1588704597 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\figuras.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+	"Lectura.h"
 
