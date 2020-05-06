@@ -88,3 +88,41 @@
 	"Figuras.h"
 	"Lectura.h"
 
+1588726220 source:c:\users\franco user\documents\algoritmos\tp algoritmos\tp-figuras-actualizado\lectura.cpp
+	"Lectura.h"
+	"Figuras.h"
+	<list>
+
+1588724869 c:\users\franco user\documents\algoritmos\tp algoritmos\tp-figuras-actualizado\lectura.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<list>
+
+1588785226 c:\users\franco user\documents\algoritmos\tp algoritmos\tp-figuras-actualizado\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1588724628 source:c:\users\franco user\documents\algoritmos\tp algoritmos\tp-figuras-actualizado\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+	"Lectura.h"
+
+1588785241 source:c:\users\franco user\documents\algoritmos\tp algoritmos\tp-figuras-actualizado\figuras.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+	"Lectura.h"
+

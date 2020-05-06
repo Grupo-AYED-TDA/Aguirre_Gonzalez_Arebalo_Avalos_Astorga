@@ -34,7 +34,7 @@ float areaRectangulo(float base, float altura);//chino
 float areaTriangulo(float base, float altura);//sergio
 
 
-void totalfigura(t_figura *&ptrfigura);//franco astorga
+float totalfigura(t_figura *&ptrfigura);//franco astorga
 void totalfiguracolor(t_figura *&ptrfigura);//franco aguirre
 void mostrarOrdenProduccionPorColor(t_figura *&ptrfigura);//chino
 void mostrarOrdenPorArea(t_figura *&ptrfigura);//mati

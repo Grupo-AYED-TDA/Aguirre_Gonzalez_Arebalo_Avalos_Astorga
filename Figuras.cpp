@@ -9,12 +9,12 @@ using namespace std;
 const float pi=3.14159265359;
 
 struct t_figura{
-int id;
-float area;
-string tipo;
-string color;
-string descripcion;
-t_figura *siguiente;
+	int id;
+	float area;
+	string tipo;
+	string color;
+	string descripcion;
+	t_figura *siguiente;
 };
 
 void constructor(int input_id, float input_area,string input_tipo,string input_color,string texto, t_figura *&lista){
@@ -26,9 +26,9 @@ void constructor(int input_id, float input_area,string input_tipo,string input_c
             nueva_figura->descripcion = texto;
 
             t_figura *aux1 = lista;//1 creo una lista auxiliar y guardo los datos de lista
-    //     lista = nueva_figura;//2  los datos del nuevo nodo(nueva_figura) los guardo en la lista y el siguente de lista apunta a nuevo nodo
-    //     nueva_figura->siguiente= aux1;//3  el siuente de nuevo nodo va a ser lo ultimo que haya en lista (la primera vez es null)
-                                     //con 1, 2 y 3 agrego el nodo siempre al principio, sin odenar la lista
+   								    //     lista = nueva_figura;//2  los datos del nuevo nodo(nueva_figura) los guardo en la lista y el siguente de lista apunta a nuevo nodo
+    								//     nueva_figura->siguiente= aux1;//3  el siuente de nuevo nodo va a ser lo ultimo que haya en lista (la primera vez es null)
+                                    //con 1, 2 y 3 agrego el nodo siempre al principio, sin odenar la lista
 
            //en nuestro caso hay que ordenar porque de lo contrario al recorrerla se mostraría primero la última ingresada
            //PARA ORDENAR saco el 2 y 3 y AGREGO:
@@ -69,10 +69,20 @@ float areaTriangulo(float base, float altura){
   return base*altura/2;
 }
 
+float areaCubo(float lado){
+  return (lado * lado) * 6;
+}
 
-void setId(int id_global,t_figura *&ptrfigura){
-//id_gloabl=id_global+1;
-//ptrfigura->id=id_global;
+float areaRectangulo(float base, float altura){
+  return base*altura;
+}
+
+float areaCilindro(float radio,float altura){
+    return 2 * pi * radio * (radio + altura);
+}
+
+float areaCirculo(float radio){
+	return pi*(radio*radio);
 }
 
 float getId(t_figura *&ptrfigura){
@@ -106,7 +116,21 @@ string getTipo(t_figura *&ptrfigura){
 return ptrfigura->tipo;
 }
 
+float totalfigura(t_figura *&ptrfigura){
 
-//float areaCirculo(float radio){
-//	return pi*(radio*radio);
-//}
+    float total=0;
+    t_figura *actual=new t_figura();
+    actual=ptrfigura;
+
+	while(actual != NULL)
+	{
+		total+=actual->area;
+
+		actual=actual->siguiente;
+
+	}
+
+
+    return total;
+}
+

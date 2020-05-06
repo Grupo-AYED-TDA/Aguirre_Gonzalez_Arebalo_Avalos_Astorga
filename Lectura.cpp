@@ -18,25 +18,35 @@ string replaceNum(string s){
     return s;
 }
 
-void separarPalabras(string s,string* &puntero)
+void separarPalabras(string s, int id, t_lectura *&lectura_delinea)
 {
     string aux;
     std::string delimiter = " ";
     size_t posDelimiter = 0;
+    
+    t_lectura *nueva_lec =  new t_lectura();
     int i=0;
-
+	nueva_lec ->id = id;
+	
     //ver info de npos http://www.cplusplus.com/reference/string/string/npos/
     while ((posDelimiter = s.find(delimiter)) != std::string::npos)//mientras la posicion del espacio (delimiter) no sea la última de la linea
     {
-        puntero[i]= s.substr(0, posDelimiter);//guardo en geeks[i] los caracteres desde 0 la cantidad de "pos" caracteres
+    	
+        nueva_lec->p[i] = s.substr(0, posDelimiter);//guardo en geeks[i] los caracteres desde 0 la cantidad de "pos" caracteres
         s.erase(0, posDelimiter + delimiter.length());//Elimina del vector un solo elemento (posición) o un rango de elementos([desde, hasta]), este caso es el segundo de modo que en la vuelta siguiente la posicion 0 va a ser donde está el espacio ahora.
-        i++;
+		i++;
     }
-    puntero[i]=s;
+    
+    nueva_lec->p[i] = s;
+    
+    t_lectura *aux1 = lectura_delinea;//1 creo una lista auxiliar y guardo los datos de lista
+    lectura_delinea = nueva_lec;	  //2  los datos del nuevo nodo(nueva_figura) los guardo en la lista y el siguente de lista apunta a nuevo nodo
+    nueva_lec->siguiente = aux1;	 	  //3  el siuente de nuevo nodo va a ser lo ultimo que haya en lista (la primera vez es null)
+
 }
 
 
-void Lectura(t_figura *&o_figura)
+void Lectura(t_lectura *&o_lectura)
 {
     ifstream archivo;//ifstream(tipo de variable para abrir un archivo)...  archivo (nombre de la variable)
     string texto;// variable string
@@ -53,30 +63,16 @@ void Lectura(t_figura *&o_figura)
 
      //si se abre
     while(!archivo.eof())//mientras no sea el final del archivo
-    {  id++;
+    {  
+		id++;
         getline(archivo,texto);//Tomo lo que va encontrando (por linea, creo) en "archivo" y lo copio en "texto"
-        separarPalabras(texto,puntero);//Mando un puntero a un vector y toda lo copiado (la linea) a separarlo (para guardar en las distintas posiciones del vector)
-        buscarFigura(id, puntero, o_figura);
+        //Mando un puntero a un vector y toda lo copiado (la linea) a separarlo (para guardar en las distintas posiciones del vector)
+        separarPalabras(texto, id, o_lectura);
     }
       archivo.close();//cerramos archivo
 
 }
 
-void buscarFigura(int id, string *&p, t_figura *&o_figura)
-{
-        string tipo; string color; string valor1; string valor2;
-        for(int i=0;i<5;i++)
-        {
-            switch(i) {
-              case 0:tipo = *p;break;
-              case 1:color = *(p+i);break;
-              case 2:valor1 = *(p+i);break;
-              case 3:valor2 = *(p+i);break;
-              }
-
-        }
-       llamarContructorDeLista(id, tipo, color, valor1, valor2, o_figura);
-}
 
 void llamarContructorDeLista(int id, string tipo, string color, string valor1, string valor2, t_figura *&o_figura){
        string descripcion;
@@ -85,19 +81,19 @@ void llamarContructorDeLista(int id, string tipo, string color, string valor1, s
 
        if(tipo=="circulo"){
          descripcion = "Radio: "+valor1;
-        constructor( id, valor1f, tipo, color, descripcion, o_figura);
+        constructor( id, areaCirculo(valor1f), tipo, color, descripcion, o_figura);
        }
        if(tipo =="cubo"){
         descripcion = "Lado: "+valor1;
-        constructor( id, valor1f, tipo, color, descripcion, o_figura);
+        constructor( id, areaCubo(valor1f), tipo, color, descripcion, o_figura);
        }
         if(tipo =="cilindro"){
         descripcion = "Radio: "+valor1+" Altura: "+valor2;
-        constructor( id, valor1f+valor2f, tipo, color, descripcion, o_figura);
+        constructor( id, areaCilindro(valor1f, valor2f), tipo, color, descripcion, o_figura);
        }
        if(tipo =="rectangulo"){
         descripcion = "Base: "+valor1+" Altura: "+valor2;
-        constructor( id, valor1f+valor2f, tipo, color, descripcion, o_figura);
+        constructor( id, areaRectangulo(valor1f, valor2f), tipo, color, descripcion, o_figura);
        }
        if(tipo =="triangulo"){
         descripcion = "Base: "+valor1+" Altura: "+valor2;
