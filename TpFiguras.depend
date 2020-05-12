@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588119976 source:c:\users\franco user\documents\algoritmos\tpfiguras\main.cpp
+1588903256 source:c:\users\franc\onedrive\desktop\new folder\tpfiguras\figuras.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>
@@ -7,17 +7,30 @@
 	<stdlib.h>
 	"Figuras.h"
 
-1588180525 c:\users\franco user\documents\algoritmos\tpfiguras\figuras.h
+1588903056 c:\users\franc\onedrive\desktop\new folder\tpfiguras\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<set>
+
+1588900940 source:c:\users\franc\onedrive\desktop\new folder\tpfiguras\lectura.cpp
+	<stdlib.h>
+	<string>
+	<string.h>
+	<iostream>
+	<bits/stdc++.h>
+	"Lectura.h"
+
+1588900901 c:\users\franc\onedrive\desktop\new folder\tpfiguras\lectura.h
 	<iostream>
 	<fstream>
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
 
-1588139481 source:c:\users\franco user\documents\algoritmos\tpfiguras\funciones.cpp
-	"Figuras.h"
-
-1588704597 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\main.cpp
+1588903412 source:c:\users\franc\onedrive\desktop\new folder\tpfiguras\main.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>
@@ -26,14 +39,7 @@
 	"Figuras.h"
 	"Lectura.h"
 
-1588704283 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\figuras.h
-	<iostream>
-	<fstream>
-	<stdio.h>
-	<string.h>
-	<stdlib.h>
-
-1588119976 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leer desde archivo\leerarchivopunteroycontda\main.cpp
+1588986089 source:c:\users\franc\onedrive\desktop\nf\grupo_6\figuras.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>
@@ -41,45 +47,70 @@
 	<stdlib.h>
 	"Figuras.h"
 
-1588180525 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leer desde archivo\leerarchivopunteroycontda\figuras.h
+1588903505 c:\users\franc\onedrive\desktop\nf\grupo_6\figuras.h
 	<iostream>
 	<fstream>
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
+	<set>
 
-1588482261 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\funciones.cpp
-	"leer.h"
-
-1588482612 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\leer.h
-	<iostream>
-	<fstream>
-	<stdio.h>
-	<string.h>
+1588900940 source:c:\users\franc\onedrive\desktop\nf\grupo_6\lectura.cpp
 	<stdlib.h>
-
-1588482299 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\leerarchivopunteroycontda\main.cpp
-	<iostream>
-	<fstream>
-	<stdio.h>
+	<string>
 	<string.h>
-	<stdlib.h>
-	"leer.h"
-
-1588706350 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\lectura.cpp
+	<iostream>
+	<bits/stdc++.h>
 	"Lectura.h"
-	"Figuras.h"
-	<list>
 
-1588705237 d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\lectura.h
+1588900901 c:\users\franc\onedrive\desktop\nf\grupo_6\lectura.h
 	<iostream>
 	<fstream>
 	<stdio.h>
 	<string.h>
 	<stdlib.h>
-	<list>
 
-1588704597 source:d:\licenciatura en sistemas\3∫ a—o\1∫ cuatrimestre\algoritmo y estructura de datos\tp cuatrimestral\tpfiguras\figuras.cpp
+1588986119 source:c:\users\franc\onedrive\desktop\nf\grupo_6\main.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+	"Lectura.h"
+
+1589318684 source:c:\users\franc\onedrive\desktop\grupo_6-francoaguirrebranch\grupo_6-francoaguirrebranch\figuras.cpp
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"Figuras.h"
+
+1589318869 c:\users\franc\onedrive\desktop\grupo_6-francoaguirrebranch\grupo_6-francoaguirrebranch\figuras.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<set>
+
+1588986750 source:c:\users\franc\onedrive\desktop\grupo_6-francoaguirrebranch\grupo_6-francoaguirrebranch\lectura.cpp
+	<stdlib.h>
+	<string>
+	<string.h>
+	<iostream>
+	<bits/stdc++.h>
+	"Lectura.h"
+
+1588986750 c:\users\franc\onedrive\desktop\grupo_6-francoaguirrebranch\grupo_6-francoaguirrebranch\lectura.h
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1589318676 source:c:\users\franc\onedrive\desktop\grupo_6-francoaguirrebranch\grupo_6-francoaguirrebranch\main.cpp
 	<iostream>
 	<fstream>
 	<stdio.h>

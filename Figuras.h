@@ -5,15 +5,29 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <set>
 
 using namespace std;
 
+struct t_figura{
+    int id;
+    string tipo;
+    string color;
+    float area;
+    string descripcion;
+    t_figura *siguiente;
+};
 
-/* material=area */
 
-struct t_figura;//al  poner paso como parametro "t_figura *&lista"...  tambien puedo definir un puntero de tipo "t_figura" así "typedef struct t_figura *ptr_t_Figura" y pasar como parametro "ptr_t_Figura" con o sin nombre de variable
+const float pi=3.14159265359;
 
-void constructor(int id, float area,string tipo,string color,string texto, t_figura *&lista);
+/*PRE: Recibe; int id,string tipo,string color, float area (calculada) ,string descripcion (en descripcion van los valores
+   y etiqueta de radio, lado, base y/o altura, que se usó, según el tipo de figura, para calcular el area) y una lista figura
+  POST: Se crgó cada parametro recibido a los atributos del nodo de lista figura, ordenando la lista*/
+void constructor(int id,string tipo,string color, float area,string descripcion, t_figura *&lista);
+/*PRE: Recibe una lista figura
+  POST: Mostró la lista de figura, cada atributo con una etiqueta*/
+void mostrarLista(t_figura *&o_figura);
 void setId(int &id_global,t_figura *&ptrfigura);
 float getId(t_figura *&ptrfigura);
 void setArea(float area_calculada, t_figura *&ptrfigura);
@@ -31,17 +45,20 @@ float areaCirculo(float radio); //mati
 float areaCubo(float lado); //franco astorga
 float areaCilindro(float radio,float altura);//franco aguirre
 float areaRectangulo(float base, float altura);//chino
+/*PRE: Recibe base y altura en float
+  POST: Retorna el area del triangulo en float*/
 float areaTriangulo(float base, float altura);//sergio
 
 
-void totalfigura(t_figura *&ptrfigura);//franco astorga
-void totalfiguracolor(t_figura *&ptrfigura);//franco aguirre
+float totalfigura(t_figura *&ptrfigura);//franco astorga HECHO
+//void totalfiguracolor(t_figura *&ptrfigura);//franco aguirre HECHO
 void mostrarOrdenProduccionPorColor(t_figura *&ptrfigura);//chino
 void mostrarOrdenPorArea(t_figura *&ptrfigura);//mati
 
-
-//
-
+set<string> getTiposFigura(t_figura *&ptrfigura); // Trae todos los tipos distintos de figuras encontrados en el lote
+set<string> getColores(t_figura *&ptrfigura); // Trae todos los tipos distintos de colores encontrados en el lote
+float getTotalFiguraXColor(t_figura *&ptrfigura,string tipoFigura,string color); // Retorna la suma de las areas que coincidan con los parametros recibidos
+void mostrarTotalesTotalFiguraXColor(t_figura *&ptrfigura); // Imprime el area de las combinaciones posibles entre color y tipo de figura existente
 
 
 /*a desarrollar:
@@ -52,17 +69,8 @@ Que ​ Color ​ posee.        							     getColor();
 Que ​ Cantidad de Plástico ​ se usó (sería la suma de las áreas de las figuras): 	     get area();
 Además, se necesitan saber:
 ○ Los ​ Totales ​ por Figura
-
 + total por Figura-Color.
-
-sergio lectura y llamaria a los constructores
-cada uno hace un constructor
-
-
-
-
-
-
+sergio lectura y llamaria al constructor
 */
 
 
