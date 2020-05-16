@@ -35,3 +35,4 @@ float convertirStringA_float(string variableString);
 
 
 #endif // LECTURA_H_INCLUDED
+

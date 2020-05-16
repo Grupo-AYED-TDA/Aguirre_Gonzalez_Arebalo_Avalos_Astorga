@@ -60,6 +60,12 @@ set<string> getColores(t_figura *&ptrfigura); // Trae todos los tipos distintos 
 float getTotalFiguraXColor(t_figura *&ptrfigura,string tipoFigura,string color); // Retorna la suma de las areas que coincidan con los parametros recibidos
 void mostrarTotalesTotalFiguraXColor(t_figura *&ptrfigura); // Imprime el area de las combinaciones posibles entre color y tipo de figura existente
 
+//Sin los sets
+
+void ordenarListaPorTipo(t_figura *&ptrfigura);
+void ordenarListaPorTipoYColor(t_figura *&ptrfigura);
+void mostrarTotalesTotalFiguraXColor2(t_figura *&ptrfigura);
+
 
 /*a desarrollar:
 Una vez que termina un lote de producción (cada archivo es un lote), se necesita saber para
@@ -76,3 +82,4 @@ sergio lectura y llamaria al constructor
 
 
 #endif // FIGURAS_H_INCLUDED
+

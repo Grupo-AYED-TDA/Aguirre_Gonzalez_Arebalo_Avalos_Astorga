@@ -184,3 +184,130 @@ float totalfigura(t_figura *&ptrfigura){
     return total;
 }
 
+void ordenarListaPorTipo(t_figura *&ptrfigura)
+{
+     t_figura * actual;
+     t_figura * siguiente;
+     int t;
+     string tipo;
+     string color;
+     float area;
+     string descripcion;
+
+
+     actual = ptrfigura;
+
+     while(actual->siguiente != NULL)
+     {
+          siguiente = actual->siguiente;
+
+          while(siguiente!=NULL)
+          {
+               if( actual->tipo <= siguiente->tipo) // actual->tipo).compare(siguiente->tipo) != 0
+               {
+                    t = siguiente->id;
+                    siguiente->id = actual->id;
+                    actual->id = t;
+
+                    tipo = siguiente->tipo;
+                    siguiente->tipo = actual->tipo;
+                    actual->tipo = tipo;
+
+                    color = siguiente->color;
+                    siguiente->color = actual->color;
+                    actual->color = color;
+
+                    area = siguiente->area;
+                    siguiente->area = actual->area;
+                    actual->area = area;
+
+                    descripcion = siguiente->descripcion;
+                    siguiente->descripcion = actual->descripcion;
+                    actual->descripcion = descripcion;
+
+               }
+
+               siguiente = siguiente->siguiente;
+          }
+          actual = actual->siguiente;
+          siguiente = actual->siguiente;
+
+     }
+
+
+
+     cout<<"\nLista ordenada por tipo"<<endl;
+}
+
+
+void ordenarListaPorTipoYColor(t_figura *&ptrfigura)
+{
+     t_figura * actual;
+     t_figura * siguiente;
+     int t;
+     string tipo;
+     string color;
+     float area;
+     string descripcion;
+
+
+     actual = ptrfigura;
+
+     while(actual->siguiente != NULL)
+     {
+          siguiente = actual->siguiente;
+
+          while(siguiente!=NULL)
+          {
+               if( actual->tipo == siguiente->tipo && actual->color <= siguiente->color ) // actual->tipo).compare(siguiente->tipo) != 0
+               {
+                    t = siguiente->id;
+                    siguiente->id = actual->id;
+                    actual->id = t;
+
+                    tipo = siguiente->tipo;
+                    siguiente->tipo = actual->tipo;
+                    actual->tipo = tipo;
+
+                    color = siguiente->color;
+                    siguiente->color = actual->color;
+                    actual->color = color;
+
+                    area = siguiente->area;
+                    siguiente->area = actual->area;
+                    actual->area = area;
+
+                    descripcion = siguiente->descripcion;
+                    siguiente->descripcion = actual->descripcion;
+                    actual->descripcion = descripcion;
+
+               }
+
+               siguiente = siguiente->siguiente;
+          }
+          actual = actual->siguiente;
+          siguiente = actual->siguiente;
+
+     }
+
+
+
+     cout<<"\nLista ordenada por nombre y color"<<endl<<endl;
+}
+
+void mostrarTotalesTotalFiguraXColor2(t_figura *&ptrfigura){
+    t_figura * aux = ptrfigura;
+    t_figura * aux1 = ptrfigura;
+    string tipoAux = "vacio";
+    string colorAux = "vacio";
+
+    while(aux!=NULL){
+        if(tipoAux!=aux->tipo || colorAux!=aux->color){
+        cout<<aux->tipo <<" ----> "<< aux->color <<" ----> "<< getTotalFiguraXColor(aux1,aux->tipo,aux->color) <<"\n";
+         tipoAux = aux->tipo;
+         colorAux = aux->color;
+        }
+        aux = aux->siguiente;
+    }
+
+}
